@@ -1,6 +1,6 @@
 # Dynamo query vs get
 
-Test to see if there are any performance differences between query and get for a single item.
+Test to see if there are any performance differences between query and get for fetching a single item using a primary & partition key.
 
 ## Getting started
 
@@ -14,6 +14,19 @@ npm run get-item # get item using dynamo get
 ## Results
 
 These are the results based off a dynamo table ~2.4m records and size ~208mb. I requested a record 100 times and ran the test 5 times for both GetItem and QueryItem. I posted the best results for each. I excluded the first request from this data, since that usually takes 300ms - 2000ms due to initialisation of the dynamo client.
+
+### GetItem
+
+Average time: 46.56ms
+max time: 242.18ms
+min time: 41.99ms
+
+### QueryItem
+
+Average time: 48.11ms
+max time: 231.67ms
+min time: 43.13ms
+
 
 | Run number | GetItem  | QueryItem |
 | ---------- | -------- | --------- |
@@ -117,15 +130,3 @@ These are the results based off a dynamo table ~2.4m records and size ~208mb. I 
 | 98         | 44.81ms  | 46.80ms   |
 | 99         | 44.06ms  | 44.33ms   |
 | 100        | 43.13ms  | 45.52ms   |
-
-### GetItem
-
-Average time: 46.56ms
-max time: 242.18ms
-min time: 41.99ms
-
-### QueryItem
-
-Average time: 48.11ms
-max time: 231.67ms
-min time: 43.13ms
