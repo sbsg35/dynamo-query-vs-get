@@ -18,14 +18,18 @@ These are the results based off a dynamo table ~2.4m records and size ~208mb. I 
 ### GetItem
 
 Average time: 46.56ms
-max time: 242.18ms
-min time: 41.99ms
+
+Max time: 242.18ms
+
+Min time: 41.99ms
 
 ### QueryItem
 
 Average time: 48.11ms
-max time: 231.67ms
-min time: 43.13ms
+
+Max time: 231.67ms
+
+Min time: 43.13ms
 
 
 | Run number | GetItem  | QueryItem |
