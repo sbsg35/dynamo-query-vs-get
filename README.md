@@ -1,6 +1,6 @@
 # Dynamo query vs get
 
-Test to see if there are any performance differences between query and get for fetching a single item using a primary & partition key.
+Test to see if there are any performance differences between query and get for fetching a single item using a partition (which is also a primary) key.
 
 ## Getting started
 
